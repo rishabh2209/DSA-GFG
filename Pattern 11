@@ -1,0 +1,50 @@
+Pattern 11
+BasicAccuracy: 86.86%Submissions: 2747Points: 1
+Geek is very fond of patterns. Once, his teacher gave him a pattern to solve. He gave Geek an integer n and asked him to build a pattern.
+
+Help Geek to build a star pattern.
+
+ 
+
+Example 1:
+
+Input: 5
+
+Output:
+1 
+0 1 
+1 0 1
+0 1 0 1 
+1 0 1 0 1
+ 
+
+Your Task:
+
+You don't need to input anything. Complete the function printTriangle() which takes  an integer n  as the input parameter and print the pattern.
+
+
+class Solution {
+  public:
+    void printTriangle(int n) {
+         for(int i=0; i<n; i++)
+        {
+            for (int j=0; j<=i; j++)
+            {
+                if(j%2==0 && i%2==0)
+                {
+                    cout<<"1 ";
+                }
+                else if(!(j%2==0) && !(i%2==0))
+                {
+                    cout<<"1 ";
+                }
+                else
+                {
+                    cout<<"0 ";
+                }
+                
+            }
+            cout<<endl;
+        }
+    }
+};
